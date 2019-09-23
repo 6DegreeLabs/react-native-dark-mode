@@ -9,7 +9,7 @@ static RNDarkMode *currentManager = NULL;
 
 + (void)load
 {
-	if (@available(iOS 13.0, *)) {
+	if (@available(tvOS 13.0, iOS 13.0, *)) {
 		static dispatch_once_t token;
 		dispatch_once(&token, ^{
 			SEL originalMethodSelector = @selector(traitCollectionDidChange:);
@@ -37,7 +37,7 @@ static RNDarkMode *currentManager = NULL;
 
 + (void)parseCurrentTraitCollection:(UITraitCollection *)traitCollection
 {
-	if (@available(iOS 13.0, *)) {
+	if (@available(tvOS 13.0, iOS 13.0, *)) {
 		UIUserInterfaceStyle traitStyle = traitCollection.userInterfaceStyle;
 		UIUserInterfaceStyle currentStyle = currentMode == RNDarkModeModeDark ? UIUserInterfaceStyleDark : UIUserInterfaceStyleLight;
 		if (traitStyle != currentStyle) {
@@ -49,7 +49,7 @@ static RNDarkMode *currentManager = NULL;
 
 + (NSString *)getCurrentMode
 {
-	if (@available(iOS 13.0, *)) { // TODO: Remove when simulator bug is fixed
+	if (@available(tvOS 13.0, iOS 13.0, *)) { // TODO: Remove when simulator bug is fixed
 		static BOOL hasRun = NO;
 		if (!hasRun) {
 			[UIScreen parseCurrentTraitCollection:UITraitCollection.currentTraitCollection];

@@ -9,10 +9,21 @@
 /* Begin PBXBuildFile section */
 		6E2083D522AAE84600CC4732 /* RNDarkMode.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E2083D422AAE84600CC4732 /* RNDarkMode.m */; };
 		6E20840122AB2A1700CC4732 /* UIScreen+RNDarkModeTraitChangeListener.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E20840022AB2A1700CC4732 /* UIScreen+RNDarkModeTraitChangeListener.m */; };
+		AAB92B6B23395C2100F3FB15 /* RNDarkMode.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E2083D422AAE84600CC4732 /* RNDarkMode.m */; };
+		AAB92B6C23395D4D00F3FB15 /* UIScreen+RNDarkModeTraitChangeListener.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E20840022AB2A1700CC4732 /* UIScreen+RNDarkModeTraitChangeListener.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		6E20834622AADA1000CC4732 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AAB92B6023395A7F00F3FB15 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "include/$(PRODUCT_NAME)";
@@ -29,10 +40,18 @@
 		6E2083D422AAE84600CC4732 /* RNDarkMode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNDarkMode.m; sourceTree = "<group>"; };
 		6E2083FF22AB2A1700CC4732 /* UIScreen+RNDarkModeTraitChangeListener.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIScreen+RNDarkModeTraitChangeListener.h"; sourceTree = "<group>"; };
 		6E20840022AB2A1700CC4732 /* UIScreen+RNDarkModeTraitChangeListener.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIScreen+RNDarkModeTraitChangeListener.m"; sourceTree = "<group>"; };
+		AAB92B6223395A7F00F3FB15 /* libRNDarkMode-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libRNDarkMode-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		6E20834522AADA1000CC4732 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AAB92B5F23395A7F00F3FB15 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -58,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				6E20834822AADA1000CC4732 /* libRNDarkMode.a */,
+				AAB92B6223395A7F00F3FB15 /* libRNDarkMode-tvOS.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -82,6 +102,23 @@
 			productReference = 6E20834822AADA1000CC4732 /* libRNDarkMode.a */;
 			productType = "com.apple.product-type.library.static";
 		};
+		AAB92B6123395A7F00F3FB15 /* RNDarkMode-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AAB92B6A23395A7F00F3FB15 /* Build configuration list for PBXNativeTarget "RNDarkMode-tvOS" */;
+			buildPhases = (
+				AAB92B5E23395A7F00F3FB15 /* Sources */,
+				AAB92B5F23395A7F00F3FB15 /* Frameworks */,
+				AAB92B6023395A7F00F3FB15 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "RNDarkMode-tvOS";
+			productName = "RNDarkMode-tvOS";
+			productReference = AAB92B6223395A7F00F3FB15 /* libRNDarkMode-tvOS.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -92,6 +129,9 @@
 				ORGANIZATIONNAME = Codemotion;
 				TargetAttributes = {
 					6E20834722AADA1000CC4732 = {
+						CreatedOnToolsVersion = 11.0;
+					};
+					AAB92B6123395A7F00F3FB15 = {
 						CreatedOnToolsVersion = 11.0;
 					};
 				};
@@ -110,6 +150,7 @@
 			projectRoot = "";
 			targets = (
 				6E20834722AADA1000CC4732 /* RNDarkMode */,
+				AAB92B6123395A7F00F3FB15 /* RNDarkMode-tvOS */,
 			);
 		};
 /* End PBXProject section */
@@ -121,6 +162,15 @@
 			files = (
 				6E2083D522AAE84600CC4732 /* RNDarkMode.m in Sources */,
 				6E20840122AB2A1700CC4732 /* UIScreen+RNDarkModeTraitChangeListener.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AAB92B5E23395A7F00F3FB15 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAB92B6C23395D4D00F3FB15 /* UIScreen+RNDarkModeTraitChangeListener.m in Sources */,
+				AAB92B6B23395C2100F3FB15 /* RNDarkMode.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +309,34 @@
 			};
 			name = Release;
 		};
+		AAB92B6823395A7F00F3FB15 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D77AKBDCZS;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 13.0;
+			};
+			name = Debug;
+		};
+		AAB92B6923395A7F00F3FB15 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D77AKBDCZS;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 13.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -276,6 +354,15 @@
 			buildConfigurations = (
 				6E20835222AADA1000CC4732 /* Debug */,
 				6E20835322AADA1000CC4732 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AAB92B6A23395A7F00F3FB15 /* Build configuration list for PBXNativeTarget "RNDarkMode-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AAB92B6823395A7F00F3FB15 /* Debug */,
+				AAB92B6923395A7F00F3FB15 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
