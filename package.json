@@ -1,6 +1,6 @@
 {
 	"name": "react-native-dark-mode",
-	"version": "0.1.0",
+	"version": "0.0.12",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/6DegreeLabs/react-native-dark-theme.git",
@@ -19,8 +19,15 @@
 		]
 	},
 	"scripts": {
-		"start": "yarn workspace example start"
+		"start": "yarn workspace example start",
+		"prepublishOnly": "yarn run clean && yarn run copy-readme && yarn run build && yarn run copy-js-d.ts",
+		"clean": "rimraf dist",
+		"copy-readme": "cp ./README.md ./",
+		"copy-js-d.ts": "cp ./src/*.js ./src/*.d.ts ./dist",
+		"build": "tsc",
+		"watch": "yarn run build --watch"
 	},
+
 	"devDependencies": {
 		"@babel/core": "^7.4.5",
 		"@babel/runtime": "^7.4.5",
