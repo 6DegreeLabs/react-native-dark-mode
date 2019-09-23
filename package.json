@@ -1,5 +1,6 @@
 {
-	"private": true,
+	"name": "react-native-dark-mode",
+	"version": "1.0",
 	"workspaces": {
 		"packages": [
 			"example",
