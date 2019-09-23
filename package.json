@@ -1,6 +1,11 @@
 {
 	"name": "react-native-dark-mode",
-	"version": "1.0",
+	"version": "0.1.0",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/6DegreeLabs/react-native-dark-theme.git",
+		"baseUrl": "https://github.com/6DegreeLabs/react-native-dark-theme"
+	  },
 	"workspaces": {
 		"packages": [
 			"example",
