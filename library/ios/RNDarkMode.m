@@ -23,7 +23,7 @@ RCT_EXPORT_MODULE();
 - (NSDictionary *)constantsToExport
 {
 	NSNumber *supportsDarkMode = [NSNumber numberWithBool:NO];
-	if (@available(iOS 13.0, *)) {
+	if (@available(tvOS 13.0, iOS 13.0, *)) {
 		supportsDarkMode = [NSNumber numberWithBool:YES];
 	}
 	
